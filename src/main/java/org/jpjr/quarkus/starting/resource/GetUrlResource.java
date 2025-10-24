@@ -1,6 +1,5 @@
 package org.jpjr.quarkus.starting.resource;
 
-import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
