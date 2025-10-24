@@ -6,8 +6,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.util.UUID;
-
 import static org.jpjr.quarkus.starting.service.UrlService.generateRandomness;
 
 @MongoEntity(collection = "urls")
@@ -16,7 +14,7 @@ import static org.jpjr.quarkus.starting.service.UrlService.generateRandomness;
 @NoArgsConstructor
 public class UrlEntity extends PanacheMongoEntity {
 
-    private UUID userId;
+    private String userId;
     private String originURL;
     private String shortenedCode;
     private Integer counter;
@@ -24,7 +22,7 @@ public class UrlEntity extends PanacheMongoEntity {
     public void urlEntity() {
     }
 
-    public UrlEntity(UUID userId, String originURL) {
+    public UrlEntity(String userId, String originURL) {
         this.userId = userId;
         this.originURL = originURL;
         this.counter = 0;

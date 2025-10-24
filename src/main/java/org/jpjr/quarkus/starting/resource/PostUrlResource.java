@@ -3,7 +3,6 @@ package org.jpjr.quarkus.starting.resource;
 import io.quarkus.logging.Log;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
-import jakarta.transaction.Transactional;
 import jakarta.ws.rs.Consumes;
 import jakarta.ws.rs.POST;
 import jakarta.ws.rs.Path;
@@ -28,7 +27,6 @@ public class PostUrlResource {
     @Inject UrlService urlService;
 
     @POST
-    @Transactional
     public Response shorten(UrlRequestDTO requestDTO, @Context UriInfo uriInfo) {
         Log.info("[PostOriginalUrlController] Iniciando busca de Url");
 

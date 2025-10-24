@@ -8,7 +8,6 @@ import org.jpjr.quarkus.starting.repository.UrlRepository;
 
 import java.security.SecureRandom;
 import java.util.Base64;
-import java.util.UUID;
 
 @ApplicationScoped
 public class UrlService {
@@ -34,7 +33,7 @@ public class UrlService {
         return entity.getOriginURL();
     }
 
-    public UrlEntity createShortenedUrl(UUID userId, String originURL) {
+    public UrlEntity createShortenedUrl(String userId, String originURL) {
         String newCode = generateRandomness(); //implementar lógica para verificar se já existe no BD
         UrlEntity newEntity = new UrlEntity(userId, originURL);
         urlRepository.persist(newEntity);
