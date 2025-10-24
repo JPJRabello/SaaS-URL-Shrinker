@@ -7,12 +7,12 @@ import static io.restassured.RestAssured.given;
 
 @QuarkusTest
 
-public class ShortenedResourceTest {
+public class GetUrlResourceTest {
   @Test
   void testGetShortenedEndpoint() {
     given()
         .redirects().follow(false)
-      .when().get("/redirect/01")
+      .when().get("/01")
       .then()
         .statusCode(302);
   }

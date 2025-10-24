@@ -4,5 +4,5 @@ import io.quarkus.test.junit.QuarkusIntegrationTest;
 
 @QuarkusIntegrationTest
 
-class ShortenedResourceIT extends ShortenedResourceTest{
+class GetUrlResourceIT extends GetUrlResourceTest {
 }
